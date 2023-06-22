@@ -10,4 +10,4 @@ const elementEl = document.querySelectorAll('.item ul')
 nameEl.forEach((itm, idx) => {
     console.log(`Category: ${nameEl[idx].textContent}`);
     console.log(`Elements: ${elementEl[idx].children.length}`);
-})
+});

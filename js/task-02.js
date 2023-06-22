@@ -6,3 +6,17 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
+
+const ingredientsEl = document.querySelector('ul#ingredients');
+ingredientsEl.style.listStyle = 'none';
+
+const newArr = ingredients.map(itm => {
+  const listEl = document.createElement('li');
+  listEl.classList.add('item');
+  listEl.append(itm);
+  // console.log(listEl);
+  return listEl;
+});
+
+// console.log(newArr);
+ingredientsEl.append(...newArr);
