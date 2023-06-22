@@ -8,7 +8,6 @@ const ingredients = [
 ];
 
 const ingredientsEl = document.querySelector('ul#ingredients');
-ingredientsEl.style.listStyle = 'none';
 
 const newArr = ingredients.map(itm => {
   const listEl = document.createElement('li');
