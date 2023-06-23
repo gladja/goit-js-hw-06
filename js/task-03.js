@@ -17,11 +17,22 @@ const galleryEl = document.querySelector('.gallery');
 galleryEl.style.listStyle = 'none';
 console.log(galleryEl)
 
-const newArr = images.map(itm =>
+const makeList = (images) => {
+  return images.map(itm =>
     `<li class="gallery-item"><img src="${itm.url}" alt="${itm.alt}" width="600"></li>`
 ).join('');
+}
 
-// console.log(newArr);
-// galleryEl.append(...newArr);
+const element = makeList(images);
 
-galleryEl.insertAdjacentHTML("beforeend", newArr);
+galleryEl.insertAdjacentHTML("beforeend", element);
+
+
+
+
+// const newArr = images.map(itm =>
+//     `<li class="gallery-item"><img src="${itm.url}" alt="${itm.alt}" width="600"></li>`
+// ).join('');
+//
+//
+// galleryEl.insertAdjacentHTML("beforeend", newArr);
