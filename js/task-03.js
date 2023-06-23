@@ -15,7 +15,6 @@ const images = [
 
 const galleryEl = document.querySelector('.gallery');
 galleryEl.style.listStyle = 'none';
-console.log(galleryEl)
 
 const makeList = (images) => {
   return images.map(itm =>
@@ -33,6 +32,6 @@ galleryEl.insertAdjacentHTML("beforeend", element);
 // const newArr = images.map(itm =>
 //     `<li class="gallery-item"><img src="${itm.url}" alt="${itm.alt}" width="600"></li>`
 // ).join('');
-//
+// console.log(galleryEl)
 //
 // galleryEl.insertAdjacentHTML("beforeend", newArr);
