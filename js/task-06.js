@@ -1,6 +1,6 @@
 const inputEl = document.querySelector('input[data-length="6"]');
 
-inputEl.addEventListener('change', onInputChange);
+inputEl.addEventListener('input', onInputChange);
 
 function onInputChange(event)  {
   const dataLength = Number(inputEl.dataset.length)
