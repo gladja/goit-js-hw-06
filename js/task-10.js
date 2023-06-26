@@ -19,6 +19,7 @@ function inputValue(event) {
    return amount = event.currentTarget.value;
 }
 
+const element = [];
 function createBoxes() {
   let sum = 0;
 
@@ -30,15 +31,18 @@ function createBoxes() {
     div.style.height = 20 + sum + 'px';
     div.style.backgroundColor = getRandomHexColor();
 
-    boxEl.append(div);
+    // boxEl.append(div);
+    element.push(div);
   }
 }
 
 function btnCreate() {
   createBoxes(amount);
+  boxEl.append(...element);
 }
 
 function destroyBoxes() {
   boxEl.innerHTML = '';
   inputValueEl.value = '';
+  element.length = 0;
 }
